@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+.env
+.venv
+venv
+*.md
+railway.json
+nixpacks.toml
+Dockerfile
+.dockerignore
+railway_logs.txt
+node_modules
+.next
+out
