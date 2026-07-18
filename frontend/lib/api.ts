@@ -42,6 +42,28 @@ export interface AnalyzeRequest {
   threshold_percent: number;
 }
 
+export interface EvaluateRequest {
+  cover_image: string;
+  secret_message: string;
+  threshold_percent: number;
+}
+
+export interface EvaluateResponse {
+  success: boolean;
+  data: {
+    lsb_standar: {
+      stego_image: string;
+      metrics: Record<string, unknown>;
+    };
+    lsb_cnn: {
+      stego_image: string;
+      metrics: Record<string, unknown>;
+    };
+    comparison: Record<string, unknown>;
+    original_image: string | null;
+  };
+}
+
 export interface AnalyzeResponse {
   success: boolean;
   data: {
