@@ -37,6 +37,7 @@ npm-debug.log*
 
 # TensorFlow model cache
 models/
+!backend/app/models/
 *.h5
 *.tflite
 *.pb
