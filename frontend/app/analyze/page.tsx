@@ -107,7 +107,7 @@ export default function AnalyzePage() {
 
       const response = await axios.post<{
         success: boolean;
-        data: AnalyzeResponse;
+        data: AnalyzeData;
       }>(`${API}/api/v1/analyze`, {
         cover_image: coverImage,
         threshold_percent: threshold,
