@@ -14,12 +14,12 @@ import {
 import { Bar, Pie } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
 import TheoreticalExplain from './TheoreticalExplain';
-import type { AnalyzeResponse } from '@/lib/types';
+import type { AnalyzeData } from '@/lib/types';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
 
 interface CoefficientDistProps {
-  data: AnalyzeResponse['coefficient_stats'];
+  data: AnalyzeData['coefficient_stats'];
   threshold: number;
 }
 

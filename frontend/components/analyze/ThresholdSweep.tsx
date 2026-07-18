@@ -15,12 +15,12 @@ import {
 import { Line } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
 import TheoreticalExplain from './TheoreticalExplain';
-import type { AnalyzeResponse } from '@/lib/types';
+import type { AnalyzeData } from '@/lib/types';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 interface ThresholdSweepProps {
-  data: AnalyzeResponse['threshold_sweep'];
+  data: AnalyzeData['threshold_sweep'];
 }
 
 export default function ThresholdSweep({ data }: ThresholdSweepProps) {

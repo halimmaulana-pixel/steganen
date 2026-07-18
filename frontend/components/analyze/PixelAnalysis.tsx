@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 import TheoreticalExplain from './TheoreticalExplain';
-import type { AnalyzeResponse } from '@/lib/types';
+import type { AnalyzeData } from '@/lib/types';
 
 interface PixelAnalysisProps {
-  data: AnalyzeResponse['pixel_analysis'];
+  data: AnalyzeData['pixel_analysis'];
   originalUrl?: string;
 }
 

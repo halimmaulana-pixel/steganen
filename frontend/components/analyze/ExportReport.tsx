@@ -2,10 +2,10 @@
 
 import { useCallback } from 'react';
 import { motion } from 'framer-motion';
-import type { AnalyzeResponse, Metrics } from '@/lib/types';
+import type { AnalyzeData, Metrics } from '@/lib/types';
 
 interface ExportReportProps {
-  analyzeData: AnalyzeResponse | null;
+  analyzeData: AnalyzeData | null;
   metrics: Metrics | null;
   threshold: number;
   imageName: string;

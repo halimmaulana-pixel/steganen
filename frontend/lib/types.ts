@@ -53,10 +53,35 @@ export interface ComparisonData {
 export type TabId = 'visual' | 'metrics' | 'charts';
 export type AnalyzeTabId = 'threshold' | 'coefficients' | 'pixels' | 'export';
 
-export interface AnalyzeResponse {
-  threshold_sweep: Record<string, unknown>;
-  coefficient_stats: Record<string, unknown>;
+export interface AnalyzeData {
+  threshold_sweep: Array<{
+    threshold: number;
+    selected_pixels: number;
+    selection_ratio: number;
+    texture_percent: number;
+  }>;
+  coefficient_stats: {
+    min: number;
+    max: number;
+    mean: number;
+    std: number;
+    median: number;
+    skewness: number;
+    kurtosis: number;
+    entropy: number;
+  };
   coefficient_distribution: Record<string, unknown>;
-  pixel_analysis: Record<string, unknown>;
-  explanations: Record<string, unknown>;
+  pixel_analysis: {
+    texture_ratio: number;
+    smooth_ratio: number;
+    selected_pixels_texture: number;
+    selected_pixels_smooth: number;
+    total_selected: number;
+    texture_selection_percent: number;
+  };
+  explanations: {
+    coefficient_distribution: string;
+    pixel_selection: string;
+    threshold_methodology: string;
+  };
 }
