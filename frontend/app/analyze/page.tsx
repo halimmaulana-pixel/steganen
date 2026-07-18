@@ -7,7 +7,7 @@ import ThresholdSweep from '@/components/analyze/ThresholdSweep';
 import CoefficientDist from '@/components/analyze/CoefficientDist';
 import PixelAnalysis from '@/components/analyze/PixelAnalysis';
 import ExportReport from '@/components/analyze/ExportReport';
-import type { AnalyzeData, AnalyzeTabId, Metrics } from '@/lib/types';
+import type { AnalyzeResponse, AnalyzeTabId, Metrics } from '@/lib/types';
 
 const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -17,7 +17,7 @@ export default function AnalyzePage() {
   const [threshold, setThreshold] = useState(30);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [result, setResult] = useState<AnalyzeData | null>(null);
+  const [result, setResult] = useState<AnalyzeResponse | null>(null);
   const [metrics, setMetrics] = useState<Metrics | null>(null);
   const [activeTab, setActiveTab] = useState<AnalyzeTabId>('threshold');
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);

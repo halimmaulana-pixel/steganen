@@ -1,0 +1,275 @@
+[INFO] [internal] load build definition from Dockerfile
+[INFO] [internal] load build definition from Dockerfile
+[INFO] [internal] load build definition from Dockerfile
+[INFO] [internal] load build definition from Dockerfile
+[INFO] [internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+[INFO] [internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+[INFO] [internal] load .dockerignore
+[INFO] [internal] load .dockerignore
+[INFO] [internal] load .dockerignore
+[INFO] [internal] load .dockerignore
+[WARN] UndefinedVar: Usage of undefined variable '$NIXPACKS_PATH' (line 18)(https://docs.docker.com/go/dockerfile/rule/undefined-var/)
+ details: Variables should be defined before their use
+
+[INFO] [stage-0 10/10] COPY . /app
+[INFO] [stage-0  9/10] RUN printf '\nPATH=/opt/venv/bin:$PATH' >> /root/.profile
+[INFO] [stage-0  8/10] RUN  pip install -r backend/requirements.txt
+[INFO] [stage-0  7/10] COPY . /app/.
+[INFO] [stage-0  6/10] RUN --mount=type=cache,id=s/3dc84210-b3ac-4dae-9010-0779b5d076cf-/root/cache/pip,target=/root/.cache/pip python -m venv --copies /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt
+[INFO] [stage-0  5/10] COPY . /app/.
+[INFO] [stage-0  4/10] RUN nix-env -if .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix && nix-collect-garbage -d
+[INFO] [stage-0  3/10] COPY .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix
+[INFO] [internal] load build context
+[INFO] [stage-0  2/10] WORKDIR /app/
+[INFO] [stage-0  1/10] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de
+[INFO] [stage-0  1/10] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de
+[INFO] [internal] load build context
+[INFO] [internal] load build context
+[INFO] [stage-0  1/10] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067@sha256:d45c89d80e13d7ad0fd555b5130f22a866d9dd10e861f589932303ef2314c7de
+[INFO] [internal] load build context
+[INFO] [stage-0  2/10] WORKDIR /app/
+[INFO] [stage-0  3/10] COPY .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix
+[INFO] [stage-0  4/10] RUN nix-env -if .nixpacks/nixpkgs-bc8f8d1be58e8c8383e683a06e1e1e57893fff87.nix && nix-collect-garbage -d
+[INFO] [stage-0  5/10] COPY . /app/.
+[INFO] [stage-0  5/10] COPY . /app/.
+[INFO] [stage-0  6/10] RUN --mount=type=cache,id=s/3dc84210-b3ac-4dae-9010-0779b5d076cf-/root/cache/pip,target=/root/.cache/pip python -m venv --copies /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt
+scheduling build on Metal builder "builder-olzaca"
+[INFO] Collecting fastapi>=0.104.0 (from -r requirements.txt (line 1))
+
+[INFO]   Downloading fastapi-0.139.2-py3-none-any.whl.metadata (26 kB)
+
+[INFO] Collecting uvicorn>=0.24.0 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading uvicorn-0.51.0-py3-none-any.whl.metadata (6.6 kB)
+
+[INFO] Collecting pydantic>=2.5.0 (from -r requirements.txt (line 3))
+
+[INFO]   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+
+[INFO] Collecting pydantic-settings>=2.1.0 (from -r requirements.txt (line 4))
+
+[INFO]   Downloading pydantic_settings-2.14.2-py3-none-any.whl.metadata (3.4 kB)
+
+[INFO] Collecting python-multipart>=0.0.6 (from -r requirements.txt (line 5))
+
+[INFO]   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+
+[INFO] Collecting numpy>=1.24.0 (from -r requirements.txt (line 6))
+
+[INFO]   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+
+[INFO] Collecting Pillow>=10.0.0 (from -r requirements.txt (line 7))
+
+[INFO]   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+
+[INFO] Collecting scikit-image>=0.22.0 (from -r requirements.txt (line 8))
+
+[INFO]   Downloading scikit_image-0.26.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (15 kB)
+
+[INFO] Collecting psutil>=5.9.0 (from -r requirements.txt (line 9))
+
+[INFO]   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+
+[INFO] Collecting httpx>=0.25.0 (from -r requirements.txt (line 10))
+
+[INFO]   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+
+[INFO] Collecting starlette>=0.46.0 (from fastapi>=0.104.0->-r requirements.txt (line 1))
+
+[INFO]   Downloading starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+
+[INFO] Collecting typing-extensions>=4.8.0 (from fastapi>=0.104.0->-r requirements.txt (line 1))
+
+[INFO]   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+
+[INFO] Collecting typing-inspection>=0.4.2 (from fastapi>=0.104.0->-r requirements.txt (line 1))
+
+[INFO]   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+
+[INFO] Collecting annotated-doc>=0.0.2 (from fastapi>=0.104.0->-r requirements.txt (line 1))
+
+[INFO]   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+
+[INFO] Collecting click>=7.0 (from uvicorn>=0.24.0->uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+
+[INFO] Collecting h11>=0.8 (from uvicorn>=0.24.0->uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+
+[INFO] Collecting annotated-types>=0.6.0 (from pydantic>=2.5.0->-r requirements.txt (line 3))
+
+[INFO]   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+
+[INFO] Collecting pydantic-core==2.46.4 (from pydantic>=2.5.0->-r requirements.txt (line 3))
+
+[INFO]   Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+
+[INFO] Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.1.0->-r requirements.txt (line 4))
+
+[INFO]   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+
+[INFO] Collecting scipy>=1.11.4 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+
+[INFO] Collecting networkx>=3.0 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+
+[INFO] Collecting imageio!=2.35.0,>=2.33 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading imageio-2.37.3-py3-none-any.whl.metadata (9.7 kB)
+
+[INFO] Collecting tifffile>=2022.8.12 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading tifffile-2026.7.14-py3-none-any.whl.metadata (33 kB)
+
+[INFO] Collecting packaging>=21 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+
+[INFO] Collecting lazy-loader>=0.4 (from scikit-image>=0.22.0->-r requirements.txt (line 8))
+
+[INFO]   Downloading lazy_loader-0.5-py3-none-any.whl.metadata (5.9 kB)
+
+[INFO] Collecting anyio (from httpx>=0.25.0->-r requirements.txt (line 10))
+
+[INFO]   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+
+[INFO] Collecting certifi (from httpx>=0.25.0->-r requirements.txt (line 10))
+
+[INFO]   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+
+[INFO] Collecting httpcore==1.* (from httpx>=0.25.0->-r requirements.txt (line 10))
+
+[INFO]   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+
+[INFO] Collecting idna (from httpx>=0.25.0->-r requirements.txt (line 10))
+
+[INFO]   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+
+[INFO] Collecting httptools>=0.8.0 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+
+[INFO] Collecting pyyaml>=5.1 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+
+[INFO] Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+
+scheduling build on Metal builder "builder-olzaca"
+[INFO] Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+
+[INFO] Collecting websockets>=13.0 (from uvicorn[standard]>=0.24.0->-r requirements.txt (line 2))
+
+[INFO]   Downloading websockets-16.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+
+[INFO] Downloading fastapi-0.139.2-py3-none-any.whl (130 kB)
+
+[INFO] Downloading uvicorn-0.51.0-py3-none-any.whl (73 kB)
+
+[INFO] Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+
+[INFO] Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 2.1/2.1 MB 1.1 GB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading pydantic_settings-2.14.2-py3-none-any.whl (61 kB)
+
+[INFO] Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+
+[INFO] Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 16.7/16.7 MB 861.9 MB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 6.9/6.9 MB 929.9 MB/s eta 0:00:00
+
+[INFO] Downloading scikit_image-0.26.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (13.6 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 13.6/13.6 MB 403.0 MB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+
+[INFO] Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+
+[INFO] Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+
+[INFO] Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+
+[INFO] Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+
+[INFO] Downloading click-8.4.2-py3-none-any.whl (119 kB)
+
+[INFO] Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+
+[INFO] Downloading httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (523 kB)
+
+[INFO] Downloading imageio-2.37.3-py3-none-any.whl (317 kB)
+
+[INFO] Downloading lazy_loader-0.5-py3-none-any.whl (8.0 kB)
+
+[INFO] Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 2.1/2.1 MB 1.2 GB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading packaging-26.2-py3-none-any.whl (100 kB)
+
+[INFO] Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+
+[INFO] Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 807.9/807.9 kB 1.1 GB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 35.3/35.3 MB 872.8 MB/s eta 0:00:00
+
+[INFO] Downloading starlette-1.3.1-py3-none-any.whl (73 kB)
+
+[INFO] Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+
+[INFO] Downloading idna-3.18-py3-none-any.whl (65 kB)
+
+[INFO] Downloading tifffile-2026.7.14-py3-none-any.whl (270 kB)
+
+[INFO] Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+
+[INFO] Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+
+[INFO] Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+
+[INFO]    ΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöüΓöü 4.4/4.4 MB 923.0 MB/s eta 0:00:00
+[INFO] 
+[INFO] Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+
+[INFO] Downloading websockets-16.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (187 kB)
+
+[INFO] Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+
+[INFO] Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-multipart, python-dotenv, psutil, Pillow, packaging, numpy, networkx, idna, httptools, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, tifffile, scipy, pydantic-core, lazy-loader, imageio, httpcore, anyio, watchfiles, starlette, scikit-image, pydantic, httpx, pydantic-settings, fastapi
+
+[INFO] Successfully installed Pillow-12.3.0 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.14.2 certifi-2026.6.17 click-8.4.2 fastapi-0.139.2 h11-0.16.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 idna-3.18 imageio-2.37.3 lazy-loader-0.5 networkx-3.6.1 numpy-2.5.1 packaging-26.2 psutil-7.2.2 pydantic-2.13.4 pydantic-core-2.46.4 pydantic-settings-2.14.2 python-dotenv-1.2.2 python-multipart-0.0.32 pyyaml-6.0.3 scikit-image-0.26.0 scipy-1.18.0 starlette-1.3.1 tifffile-2026.7.14 typing-extensions-4.16.0 typing-inspection-0.4.2 uvicorn-0.51.0 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.1
+
+[INFO] [stage-0  6/10] RUN --mount=type=cache,id=s/3dc84210-b3ac-4dae-9010-0779b5d076cf-/root/cache/pip,target=/root/.cache/pip python -m venv --copies /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt
+[INFO] [stage-0  7/10] COPY . /app/.
+[INFO] [stage-0  7/10] COPY . /app/.
+[INFO] [stage-0  8/10] RUN  pip install -r backend/requirements.txt
+[INFO] ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'backend/requirements.txt'
+
+[ERRO] [stage-0  8/10] RUN  pip install -r backend/requirements.txt
+Build Failed: build daemon returned an error < failed to solve: process "/bin/bash -ol pipefail -c pip install -r backend/requirements.txt" did not complete successfully: exit code: 1 >
+
+IMPORTANT: Railway agent tooling not detected.
+
+Ask the user if they would like this agent to run `railway setup agent -y` to configure the Railway agent tooling (agent skills and MCP configurations).
+
+Your agent will work much more effectively in Railway with these installed.
