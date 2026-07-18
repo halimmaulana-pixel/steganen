@@ -5,6 +5,8 @@ WORKDIR /app
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY backend/ ./backend/
+COPY backend/ .
 
-CMD cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+ENV PYTHONPATH=/app
+
+CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT
