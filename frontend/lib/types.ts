@@ -52,3 +52,13 @@ export interface ComparisonData {
 
 export type TabId = 'visual' | 'metrics' | 'charts';
 export type AnalyzeTabId = 'threshold' | 'coefficients' | 'pixels' | 'export';
+
+export interface AnalyzeResponse {
+  success: boolean;
+  data: {
+    coefficient_distribution: Record<string, unknown>;
+    pixel_analysis: Record<string, unknown>;
+    threshold_sweep: Record<string, unknown>;
+    theoretical_explanation: Record<string, unknown>;
+  };
+}
